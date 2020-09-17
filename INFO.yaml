@@ -1,0 +1,52 @@
+---
+project: "ci-management"
+project_creation_date: "2020-09-16"
+project_category: ""
+lifecycle_state: "Incubation"
+project_lead: &jquery_ci-management_ptl
+  name: "TBD"
+  email: "n/a"
+  id: "n/a"
+  company: "n/a"
+  timezone: "n/a"
+primary_contact: "*jquery_ci-management_ptl"
+issue_tracking:
+  type: ""
+  url: ""
+  key: ""
+mailing_list:
+  type: ""
+  url: ""
+  tag: "<[sub-project_name]>"
+realtime_discussion:
+  type: "slack"
+  server: "openjs-foundation.slack.com"
+  channel: "#jquery"
+meetings:
+  - type: ""
+    agenda: ""
+    url: ""
+    server: "n/a"
+    channel: "n/a"
+    repeats: "n/a"
+    time: "n/a"
+repositories:
+  - "ci-management"
+committers:
+  - <<: *jquery_ci-management_ptl
+  - name: "Vanessa Valderrama"
+    email: "vvalderrama@linuxfoundation.org"
+    company: "The Linux Foundation"
+    id: "valderrv"
+    timezone: "America/Chicago"
+  - name: "Andrew Grimberg"
+    email: "agrimberg@linuxfoundation.org"
+    company: "The Linux Foundation"
+    id: "tykeal"
+    timezone: "America/Los_Angeles"
+tsc:
+  approval: ""
+  changes:
+    - type: ""
+      name: ""
+      link: ""
