@@ -1,0 +1,22 @@
+---
+
+### Global JJB defaults
+
+- defaults:
+    name: global
+
+    # lf-infra-defaults
+    jenkins-ssh-credential: jenkins-ssh
+    lftools-version: <1.0.0
+
+    # GitHub configuration
+    git-url: https://github.com
+    git-clone-url: 'git@github.com:'
+    github-org: jquery
+    submodule-recursive: true
+
+    # build defaults
+    build-days-to-keep: 30
+    # Timeout in minutes
+    build-timeout: 360
+    build-node: centos7-builder-1c-1g

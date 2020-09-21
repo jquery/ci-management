@@ -1,0 +1,16 @@
+---
+- ci_jobs_common: &ci_jobs_common
+    name: ci-jobs-common
+    # Defines common ci-jobs configuration
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-1c-1g
+
+- project:
+    name: github-ci-jobs
+
+    jobs:
+      - '{project-name}-github-ci-jobs'
+
+    <<: *ci_jobs_common
