@@ -15,6 +15,15 @@
     github-org: jquery
     submodule-recursive: true
 
+    # default pr_whitelist to some LF RelEng staff
+    github_pr_whitelist:
+      - tykeal
+      - MightyNerdEric
+      - vvalderrv
+    # default pr_admin_list to LF RelEng lead
+    github_pr_admin_list:
+      - tykeal
+
     # build defaults
     build-days-to-keep: 30
     # Timeout in minutes
