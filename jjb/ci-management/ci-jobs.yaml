@@ -14,3 +14,18 @@
       - '{project-name}-github-ci-jobs'
 
     <<: *ci_jobs_common
+
+    views:
+      - project-view
+
+- project:
+    name: openstack-cron
+
+    jobs:
+      - github-openstack-cron
+
+    <<: *ci_jobs_common
+
+    jenkins-urls: >
+        https://jenkins.openjsf.org
+    openstack-cloud: vex
