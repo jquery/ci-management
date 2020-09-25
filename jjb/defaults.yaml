@@ -6,7 +6,7 @@
     name: global
 
     # lf-infra-defaults
-    jenkins-ssh-credential: jenkins-ssh
+    jenkins-ssh-credential: jquery-jenkins-ssh
     lftools-version: <1.0.0
 
     # GitHub configuration
