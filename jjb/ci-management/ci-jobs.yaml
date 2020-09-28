@@ -4,6 +4,7 @@
     # Defines common ci-jobs configuration
 
     project: ci-management
+    branch: main
     project-name: ci-management
     build-node: centos7-builder-1c-1g
 
