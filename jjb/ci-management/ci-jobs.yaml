@@ -13,7 +13,7 @@
 
     jobs:
       - '{project-name}-github-ci-jobs'
-      - gerrit-jenkins-cfg-merge:
+      - github-jenkins-cfg-merge:
           jenkins-silos: production
 
     <<: *ci_jobs_common
