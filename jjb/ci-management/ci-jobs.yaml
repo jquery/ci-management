@@ -5,6 +5,8 @@
 
     project: ci-management
     branch: main
+    stream: main
+    sha1: origin/main
     project-name: ci-management
     build-node: centos7-builder-1c-1g
 
