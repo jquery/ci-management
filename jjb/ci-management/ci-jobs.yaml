@@ -5,8 +5,7 @@
 
     project: ci-management
     branch: main
-    stream:
-      - main:
+    stream: main
     project-name: ci-management
     build-node: centos7-builder-1c-1g
 
