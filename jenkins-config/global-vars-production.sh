@@ -6,3 +6,4 @@ LOGS_SERVER=https://logs.openjsf.org
 SILO=production
 S3_BUCKET=ojsf-logs-s3-cloudfront-index
 CDN_URL=logs.openjsf.org
+NEXUS_URL=
