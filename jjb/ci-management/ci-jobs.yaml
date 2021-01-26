@@ -14,8 +14,7 @@
     name: github-ci-jobs
 
     jobs:
-      - '{project-name}-github-ci-jobs'
-      - github-jenkins-cfg-merge:
+      - '{project-name}-github-ci-jobs':
           jenkins-silos: production
 
     <<: *ci_jobs_common
