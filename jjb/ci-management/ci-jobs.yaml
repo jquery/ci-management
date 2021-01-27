@@ -9,6 +9,7 @@
     sha1: origin/main
     project-name: ci-management
     build-node: centos7-builder-1c-1g
+    jjb-version: 3.5.0
 
 - project:
     name: github-ci-jobs
