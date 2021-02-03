@@ -25,7 +25,7 @@
       - tykeal
 
     # build defaults
-    build-days-to-keep: 30
+    build-days-to-keep: 7
     # Timeout in minutes
     build-timeout: 360
     build-node: centos7-builder-1c-1g
