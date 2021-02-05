@@ -22,6 +22,12 @@
 
     <<: *ci_packer_common
 
-    templates: builder
+    templates:
+      - builder
+      - docker
+
     platforms:
       - centos-7
+      - centos-8
+      - ubuntu18.04
+      - ubuntu18.04-arm64
