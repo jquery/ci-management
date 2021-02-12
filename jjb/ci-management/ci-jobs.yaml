@@ -10,13 +10,16 @@
     project-name: ci-management
     build-node: centos7-builder-1c-1g
     jjb-version: 3.5.0
+    jenkins-silos: production
 
 - project:
     name: github-ci-jobs
 
     jobs:
-      - '{project-name}-github-ci-jobs':
-          jenkins-silos: production
+      - github-jenkins-cfg-merge
+      - github-jenkins-cfg-verify
+      - github-jjb-merge
+      - github-jjb-verify
 
     <<: *ci_jobs_common
 
