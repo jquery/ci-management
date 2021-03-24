@@ -1,2 +1,17 @@
 ---
 - import_playbook: ../common-packer/provision/baseline.yaml
+- hosts: all
+  become_user: root
+  become_method: sudo
+
+  tasks:
+    - name: "Add nodejs repo"
+      apt_repository:
+        repo: https://rpm.nodesource.com/setup_14.x
+        update_cache: yes
+
+    - name: "Install nodejs"
+      apt:
+        update_cache: yes
+        name: nodejs
+        state: present
