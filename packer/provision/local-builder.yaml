@@ -5,16 +5,18 @@
   become_method: sudo
 
   tasks:
-    - name: "Install pre-requisites"
-      yum:
-        name: 
-          - gcc
-          - g++
-          - make
-        state: present
-    - name: "Add nodejs repo"
-      shell: curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
-    - name: "Install nodejs"
-      yum:
-        name: nodejs
-        state: present
+    - block:
+      - name: "Install pre-requisites"
+        yum:
+          name: 
+            - gcc
+            - g++
+            - make
+          state: present
+      - name: "Add nodejs repo"
+        shell: curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
+      - name: "Install nodejs"
+        yum:
+          name: nodejs
+          state: present
+      when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
