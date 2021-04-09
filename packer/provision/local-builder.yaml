@@ -10,7 +10,7 @@
         yum:
           name: 
             - gcc
-            - g++
+            - gcc-c++
             - make
           state: present
       - name: "Add nodejs repo"
