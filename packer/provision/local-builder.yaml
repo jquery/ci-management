@@ -20,3 +20,4 @@
           name: nodejs
           state: present
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
+      become: yes
