@@ -1,0 +1,12 @@
+---
+- project:
+    name: jquery-core
+    project-name: jquery-core
+    project: jquery-core
+    mvn-settings: jquery-core-settings
+    stream:
+      - 'main':
+          branch: 'main'
+
+    views:
+      - project-view
