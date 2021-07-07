@@ -1,0 +1,12 @@
+---
+- project:
+    name: jquery-migrate
+    project-name: jquery-migrate
+    project: jquery-migrate
+    mvn-settings: jquery-migrate-settings
+    stream:
+      - 'main':
+          branch: 'main'
+
+    views:
+      - project-view
