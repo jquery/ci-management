@@ -1,0 +1,12 @@
+---
+- project:
+    name: jquery-ui
+    project-name: jquery-ui
+    project: jquery-ui
+    mvn-settings: jquery-ui-settings
+    stream:
+      - 'main':
+          branch: 'main'
+
+    views:
+      - project-view

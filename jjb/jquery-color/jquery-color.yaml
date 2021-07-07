@@ -1,0 +1,12 @@
+---
+- project:
+    name: jquery-color
+    project-name: jquery-color
+    project: jquery-color
+    mvn-settings: jquery-color-settings
+    stream:
+      - 'main':
+          branch: 'main'
+
+    views:
+      - project-view
