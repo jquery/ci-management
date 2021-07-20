@@ -10,5 +10,8 @@
       - '3.x-stable':
           branch: '3.x-stable'
 
+    jobs:
+      - '{project-name}-{stream}-verify-nodejs'
+
     views:
       - project-view
