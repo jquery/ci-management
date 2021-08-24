@@ -80,5 +80,5 @@
     <<: *verify_boiler_plate
 
     builders:
-      - shell: !include-raw:
+      - shell: !include-raw-escape:
           - ../shell/jquery-core-build.sh

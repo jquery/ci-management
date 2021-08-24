@@ -1,7 +1,7 @@
 #!/bin/sh -eux
 # Deletes cache and artefacts of npm, bower, git submodules and jenkins builds
 git clean -dffx
-export COMMIT=${env.GIT_COMMIT:-$(git rev-parse HEAD)}
+export COMMIT=${GIT_COMMIT:-$(git rev-parse HEAD)}
 echo "Checking nodejs version"
 which node
 node --version
