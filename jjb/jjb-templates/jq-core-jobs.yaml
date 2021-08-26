@@ -21,6 +21,13 @@
           project: "{project}"
           build-days-to-keep: "{build-days-to-keep}"
 
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
     wrappers:
       - lf-infra-wrappers:
           build-timeout: "{build-timeout}"
