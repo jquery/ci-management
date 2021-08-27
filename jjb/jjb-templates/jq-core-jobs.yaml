@@ -18,13 +18,20 @@
 
     properties:
       - lf-infra-properties:
-        project: "{project}"
-        build-days-to-keep: "{build-days-to-keep}"
+          project: "{project}"
+          build-days-to-keep: "{build-days-to-keep}"
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
 
     wrappers:
       - lf-infra-wrappers:
-        build-timeout: "{build-timeout}"
-        jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     publishers:
       - lf-infra-publish

@@ -2,7 +2,7 @@
 - project:
     name: jquery-core
     project-name: jquery-core
-    project: jquery-core
+    project: jquery
     mvn-settings: jquery-core-settings
     stream:
       - 'main':
