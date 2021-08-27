@@ -1,0 +1,10 @@
+#!/bin/bash
+
+until host github.com &>/dev/null
+do
+    echo "Waiting until github.com is resolvable..."
+done
+
+git clone --recurse-submodules https://github.com/lfit/releng-global-jjb.git /opt/ciman/global-jjb
+
+/opt/ciman/global-jjb/jenkins-init-scripts/init.sh
