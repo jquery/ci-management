@@ -3,36 +3,29 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
-      - id: check-json
       - id: trailing-whitespace
+      - id: no-commit-to-branch
+        args:
+          - --branch=master
+          - --branch=main
 
-#  - repo: https://github.com/pre-commit/mirrors-prettier
-#    rev: 2.3.1
-#    hooks:
-#      - id: prettier
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier
+        stages: [commit]
 
   - repo: https://github.com/jorisroovers/gitlint
     rev: v0.15.1
     hooks:
       - id: gitlint
 
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 2.1.5
     hooks:
       - id: shellcheck
-        exclude: >
-          (?x)^(
-              jjb/global-jjb/.*|
-              jenkins-config/.*
-          )$
-
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.26.1
-    hooks:
-      - id: yamllint
-
-  - repo: https://github.com/btford/write-good
-    rev: v1.0.4
-    hooks:
-      - id: write-good
-        exclude: README.md|README.markdown
