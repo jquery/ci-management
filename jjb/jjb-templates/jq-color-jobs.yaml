@@ -1,0 +1,91 @@
+---
+- job-boiler-plate: &job_boiler_plate
+    name: job-boiler-plate
+
+    project-type: freestyle
+    node: "{build-node}"
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: main
+    submodule-recursive: true
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          project: "{project}"
+          build-days-to-keep: "{build-days-to-keep}"
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+
+    publishers:
+      - lf-infra-publish
+
+- verify-boiler-plate: &verify_boiler_plate
+    name: verify-boiler-plate
+
+    concurrent: true
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          submodule-disable: false
+          submodule-timeout: 10
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^recheck$'
+          only-trigger-phrase: false
+          permit-all: true
+          github-hooks: true
+          auto-close-on-fail: false
+          white-list-target-branches:
+            - '{branch}'
+
+- merge-boiler-plate: &merge_boiler_plate
+    name: merge-boiler-plate
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: ''
+          branch: 'refs/heads/{branch}'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          submodule-disable: false
+          submodule-timeout: 10
+
+    triggers:
+      - github
+
+- job-template:
+    name: '{project-name}-{stream}-verify-nodejs'
+
+    <<: *job_boiler_plate
+    # yamllint disable-line rule:key-duplicates
+    <<: *verify_boiler_plate
+
+    builders:
+      - shell: !include-raw-escape:
+          - ../shell/jquery-color-build.sh

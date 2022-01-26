@@ -7,6 +7,19 @@
     stream:
       - 'main':
           branch: 'main'
+      - '1.x-3.x Core':
+          branch: 'main'
+      - 'Git Core':
+          branch: 'main'
+      - '2.x - 1.x Core':
+          branch: 'main'
+      - '2.x - 2.x-3.x Core':
+          branch: '2.x-stable'
+      - '2.x - Git Core':
+          branch: '2.x-stable'
+
+    jobs:
+      - '{project-name}-{stream}-verify-nodejs'
 
     views:
       - project-view
