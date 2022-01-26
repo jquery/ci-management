@@ -5,39 +5,39 @@
     project: jquery-ui
     mvn-settings: jquery-ui-settings
     stream:
-      - 'git core':
+      - 'git_core':
           branch: 'main'
-      - '1.10.x core':
+      - '1.10.x_core':
           branch: 'main'
-      - '1.11.x core':
+      - '1.11.x_core':
           branch: 'main'
-      - '1.12.x core':
+      - '1.12.x_core':
           branch: 'main'
-      - '1.8.x core':
+      - '1.8.x_core':
           branch: 'main'
-      - '1.9.x core':
+      - '1.9.x_core':
           branch: 'main'
-      - '2.0.x core':
+      - '2.0.x_core':
           branch: 'main'
-      - '2.1.x core':
+      - '2.1.x_core':
           branch: 'main'
-      - '2.2.x core':
+      - '2.2.x_core':
           branch: 'main'
-      - '3.x core':
+      - '3.x_core':
           branch: 'main'
-      - '3.0.x core':
+      - '3.0.x_core':
           branch: 'main'
-      - '3.1.x core':
+      - '3.1.x_core':
           branch: 'main'
-      - '3.2.x core':
+      - '3.2.x_core':
           branch: 'main'
-      - '3.3.x core':
+      - '3.3.x_core':
           branch: 'main'
-      - '3.4.x core':
+      - '3.4.x_core':
           branch: 'main'
-      - '3.5.x core':
+      - '3.5.x_core':
           branch: 'main'
-      - '3.6.x core':
+      - '3.6.x_core':
           branch: 'main'
 
     jobs:

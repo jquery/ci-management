@@ -7,15 +7,15 @@
     stream:
       - 'main':
           branch: 'main'
-      - '1.x-3.x Core':
+      - '1.x-3.x_core':
           branch: 'main'
-      - 'Git Core':
+      - 'git_core:
           branch: 'main'
-      - '2.x - 1.x Core':
+      - '2.x-1.x_core':
           branch: 'main'
-      - '2.x - 2.x-3.x Core':
+      - '2.x-2.x-3.x_core':
           branch: '2.x-stable'
-      - '2.x - Git Core':
+      - '2.x-git_core':
           branch: '2.x-stable'
 
     jobs:
