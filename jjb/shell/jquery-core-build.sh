@@ -39,5 +39,5 @@ set -e
 /usr/local/bin/tools/jenkins-testswarm-static-copy.sh jquery "${COMMIT}"
 echo "Creating and running new testswarm job"
 set +e
-grunt testswarm:"${COMMIT}":/usr/local/bin/tools/node-testswarm-config.json:jquery:jquery
+grunt testswarm:"${COMMIT}":/usr/local/bin/tools/node-testswarm-config.json:jquerytesting:jquerytesting
 exit 0
