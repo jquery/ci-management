@@ -27,7 +27,7 @@ elif [ `git branch --list 3.x-stable` ]
     scp dist/jquery.slim.min.js jenkins@wp-03.ops.jquery.net:/var/www/codeorigin.jquery.com/git/jquery-3.x-git.slim.min.js
 fi
 
-#echo "Refreshing cache" To be remved, not needed anymore
+#echo "Refreshing cache" To be removed, not needed anymore
 #set +e
 #curl -s http://codeorigin.jquery.com/jquery-git.js?reload
 #curl -s http://codeorigin.jquery.com/jquery-git.min.js?reload
