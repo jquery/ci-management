@@ -40,4 +40,5 @@ set -e
 echo "Creating and running new testswarm job"
 set +e
 grunt testswarm:"${COMMIT}":/usr/local/bin/tools/node-testswarm-config.json:jquery:jquerytesting
+
 exit 0
