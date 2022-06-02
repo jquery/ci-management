@@ -9,7 +9,7 @@
     sha1: origin/main
     project-name: ci-management
     build-node: centos7-builder-2c-2g
-    jjb-version: 3.5.0
+    jjb-version: 4.1.0
     jenkins-silos: production
 
 - project:
