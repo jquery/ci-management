@@ -1,8 +1,0 @@
-{
-  "source_ami_filter_name": "*CentOS Linux 8*HVM*",
-  "source_ami_filter_owner": "679593333241",
-  "base_image": "CentOS 8.2 (x86_64) [2020-06-11]",
-  "distro": "CentOS 8",
-  "ssh_user": "centos",
-  "cloud_user_data": "common-packer/provision/rh-user_data.sh"
-}
