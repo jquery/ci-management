@@ -5,3 +5,4 @@
   "cloud_pass": "$PACKER_CLOUD_USER_PWD",
   "cloud_network": "3b559b3e-93f3-49a7-bf18-ad48521c7f59",
   "ssh_proxy_host": ""
+}
