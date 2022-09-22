@@ -5,20 +5,22 @@
   become_method: sudo
 
   tasks:
-    - block:
-        - name: "Install pre-requisites"
-          yum:
-            name:
-              - gcc
-              - gcc-c++
-              - make
-          state: present
-        - name: "Add nodejs repo"
-          # yamllint disable-line rule:line-length
-          shell: curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
-        - name: "Install nodejs"
-          yum:
-            name: nodejs
-            state: present
-      when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
+    - name: Install pre-requisites
+      yum:
+        name:
+          - gcc
+          - gcc-c++
+          - make
+        state: present
+      become: true
+
+    - name: Add nodejs repo
+      # yamllint disable-line rule:line-length
+      shell: curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
+
+    - name: Install nodejs
+      yum:
+        name: nodejs
+        state: present
+      when: ansible_distribution == 'CentOS'
       become: true
