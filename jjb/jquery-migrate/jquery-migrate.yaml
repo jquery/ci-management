@@ -5,8 +5,12 @@
     project: jquery-migrate
     mvn-settings: jquery-migrate-settings
     stream:
-      - 'main':
+      - '3.x_core':
           branch: 'main'
+      - 'git_core':
+          branch: 'main'
+    jobs:
+      - '{project-name}-{stream}-verify-nodejs'
 
     views:
       - project-view
